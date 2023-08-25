@@ -13,7 +13,7 @@ default_args = {
 }
 
 sql_create_table = """
-    CREATE TABLE `employees` (
+    CREATE TABLE `employees_wy` (
         `employeeNumber` int(11) NOT NULL,
         `lastName` varchar(50) NOT NULL,
         `firstName` varchar(50) NOT NULL,
@@ -27,7 +27,7 @@ sql_create_table = """
 """
 
 sql_insert_data = """
-    insert  into `employees`(`employeeNumber`,`lastName`,`firstName`,`extension`,`email`,`officeCode`,`reportsTo`,`jobTitle`) values 
+    insert  into `employees_wy`(`employeeNumber`,`lastName`,`firstName`,`extension`,`email`,`officeCode`,`reportsTo`,`jobTitle`) values 
         (1002,'Murphy','Diane','x5800','dmurphy@classicmodelcars.com','1',NULL,'President'),
         (1056,'Patterson','Mary','x4611','mpatterso@classicmodelcars.com','1',1002,'VP Sales'),
         (1076,'Firrelli','Jeff','x9273','jfirrelli@classicmodelcars.com','1',1002,'VP Marketing'),
@@ -80,3 +80,4 @@ with DAG(
 
 
     t1 >> t2
+    
